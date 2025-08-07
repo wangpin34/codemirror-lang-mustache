@@ -18,7 +18,7 @@ expression {
   // Define the start and end of a Mustache block
   MustacheStart[closedBy=MustacheEnd] { "{{" }
   MustacheEnd[openedBy=MustacheStart] { "}}" }
-
+  MustacheIdentifier { $[a-zA-Z_\-0-9]+ }
   space { $[ \t\n\r]+ }
 }
 
@@ -27,8 +27,7 @@ Mustache[isolate] {
 }
 
 MustacheContent {
-  Identifier |
-  String
+  MustacheIdentifier
 }
 
 @detectDelim
