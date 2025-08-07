@@ -1,7 +1,7 @@
 {
   "name": "react-plain-editor",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.2",
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev --open",
@@ -19,9 +19,9 @@
     "@lezer/lr": "^1.4.2",
     "@radix-ui/themes": "^3.1.6",
     "codemirror": "^6.0.1",
+    "codemirror-lang-mustache": "workspace:*",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "codemirror-lang-mustache": "workspace:*"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.0",
