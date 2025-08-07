@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-mustache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mustache language support for CodeMirror",
   "scripts": {
     "test": "mocha test/test.js",
@@ -28,5 +28,6 @@
     "rollup-plugin-ts": "^3.0.2",
     "typescript": "^4.3.4"
   },
+  "homepage": "https://github.com/wangpin34/codemirror-lang-mustache",
   "license": "MIT"
 }

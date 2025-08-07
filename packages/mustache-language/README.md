@@ -1,21 +1,20 @@
-# CodeMirror 6 language package template
+# codemirror lang mustache
+Generated from the [officeial template](https://github.com/codemirror/lang-example).
 
-This is an example repository containing a minimal [CodeMirror](https://codemirror.net/6/) language support package. The idea is to clone it, rename it, and edit it to create support for a new language.
+## Getting Started
+Check sample code [react-plain-editor](https://github.com/wangpin34/codemirror-lang-mustache/tree/main/packages/react-plain-editor).
 
-Things you'll need to do (see the [language support example](https://codemirror.net/6/examples/lang-package/) for a more detailed tutorial):
+##  Develop Guide
 
-- `git grep mustache` and replace all instances with your language name.
+```bash
+# generate syntax.grammar.ts from syntax.grammar
+npx  lezer-generator src/syntax.grammar -o syntax.grammar.ts
 
-- Rewrite the grammar in `src/syntax.grammar` to cover your language. See the [Lezer system guide](https://lezer.codemirror.net/docs/guide/#writing-a-grammar) for information on this file format.
+# build the cjs/es6 dist
+npm run prepare
+```
 
-- Adjust the metadata in `src/index.ts` to work with your new grammar.
+## LICENSE
+MIT
 
-- Adjust the grammar tests in `test/cases.txt`.
 
-- Build (`npm run prepare`) and test (`npm test`).
-
-- Rewrite this readme file.
-
-- Optionally add a license.
-
-- Publish. Put your package on npm under a name like `codemirror-lang-mustache`.

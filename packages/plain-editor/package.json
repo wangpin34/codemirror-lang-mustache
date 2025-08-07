@@ -1,0 +1,26 @@
+{
+  "name": "plain-editor",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.1.4",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.35.0",
+    "@lezer/highlight": "^1.2.1",
+    "codemirror": "^6.0.1",
+    "codemirror-lang-mustache": "workspace:*"
+  },
+  "pnpm": {
+    "overrides": {
+      "codemirror-lang-mustache": "0.0.1"
+    }
+  }
+}
