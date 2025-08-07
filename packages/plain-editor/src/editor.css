@@ -1,0 +1,30 @@
+.cm-editor {
+  min-height: 100%;
+}
+
+.mustache-bracket {
+  color: #2c9678;
+}
+
+.mustache-variable {
+  color: #2b313f;
+}
+
+.mustache-content.not-found .mustache-bracket {
+  color: red;
+  /* Color for not found variables */
+}
+
+.mustache-content.not-found .mustache-variable {
+  color: red;
+  /* Color for not found variables */
+}
+
+.tooltip {
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  padding: 5px;
+  z-index: 10;
+  pointer-events: none;
+}

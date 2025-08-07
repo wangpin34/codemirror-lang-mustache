@@ -1,0 +1,33 @@
+@top Program { expression* }
+
+@skip { space | LineComment }
+
+expression {
+  Identifier |
+  String |
+  Mustache
+}
+
+@tokens {
+  Identifier { $[a-zA-Z_\-0-9]+ }
+
+  String { '"' (!["\\] | "\\" _)* '"' }
+
+  LineComment { ("#"  | ";") ![\n]* }
+
+  // Define the start and end of a Mustache block
+  MustacheStart[closedBy=MustacheEnd] { "{{" }
+  MustacheEnd[openedBy=MustacheStart] { "}}" }
+  MustacheIdentifier { $[a-zA-Z_\-0-9]+ }
+  space { $[ \t\n\r]+ }
+}
+
+Mustache[isolate] {
+  MustacheStart MustacheContent? MustacheEnd
+}
+
+MustacheContent {
+  MustacheIdentifier
+}
+
+@detectDelim
